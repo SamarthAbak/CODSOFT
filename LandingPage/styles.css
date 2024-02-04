@@ -1,0 +1,217 @@
+
+body, h1, h2, h3, p, ul, li, form, input, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background-color:#333;
+    color: #fff;
+    padding: 10px;
+}
+
+header img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-section, .menu-section, .feedback-section, .contact-section {
+    background-size:cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.hero-section::before, .menu-section::before, .feedback-section::before, .contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.menu-section h2, .feedback-section h2, .contact-section h2 {
+    margin-bottom: 30px;
+}
+
+.menu-category {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-item {
+    flex: 0 0 calc(30% - 20px); 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+   
+    height: auto;
+    border-radius: 8px;
+    max-height: 200px;
+}
+
+.feedback-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 20px;
+    border-radius: 8px;
+    color:aliceblue;
+    background-image: url('images/fedbackform1.jpg');
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.feedback-section form input,
+.feedback-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box; 
+}
+
+.featured-dish img,.menu-section img {
+height: 300px;
+width:300px;
+}
+
+.hero-section a{
+    color:aliceblue;
+}
+
+@media only screen and (max-width: 768px) {
+   
+
+    header {
+        padding: 10px 0; 
+    }
+
+    header img {
+        max-width: 40px; 
+    }
+
+    nav li {
+        margin-right: 10px; 
+    }
+
+    .hero-section, .menu-section, .feedback-section, .contact-section {
+        padding: 30px 0; 
+    }
+
+    .menu-category {
+        justify-content: center; 
+    }
+
+    .menu-item {
+        flex: 0 0 calc(100% - 20px); 
+    }
+
+    .menu-item img {
+        max-height: 150px; 
+    }
+
+    .feedback-section form {
+        background-size: cover; 
+    }
+
+    .featured-dish img, .menu-section img {
+        height: 200px; 
+        width: 200px; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section, .menu-section, .feedback-section, .contact-section {
+        background-attachment: scroll; 
+    }
+}
+
+
+@media only screen and (max-width: 412px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header li {
+        margin: 10px 0;
+    }
+}
